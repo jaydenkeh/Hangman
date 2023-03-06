@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Hangman {
 
     public static String[] words = {"ant", "baboon", "badger", "bat", "bear", "beaver", "camel",
@@ -73,6 +75,12 @@ public class Hangman {
 
 
 
+    }
+
+    public static String pickRandomWord(String[] words) {
+        Random rand = new Random();
+        int randomIndex = rand.nextInt(words.length);
+        return words[randomIndex];
     }
 
 }
